@@ -2,8 +2,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Post model
-class Post extends Model {}
+// create our Channel model
+class Channel extends Model {}
 
 // create fields/columns for Post model
 Post.init(
@@ -34,8 +34,8 @@ Post.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'post'
+      modelName: 'Channel'
     }
   );
   
-  module.exports = Post;
+  module.exports = Channel;
