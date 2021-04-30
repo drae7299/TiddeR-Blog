@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS tidder_db;
+CREATE DATABASE tidder_db;
