@@ -6,7 +6,7 @@ const sequelize = require('../config/connection');
 class Channel extends Model {}
 
 // create fields/columns for Post model
-Post.init(
+Channel.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -34,7 +34,7 @@ Post.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'post'
+      modelName: 'channel'
     }
   );
   

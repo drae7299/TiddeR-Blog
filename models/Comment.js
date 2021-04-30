@@ -37,11 +37,11 @@ Comment.init(
                 key: 'id'
             }
         },
-        post_id: {
+        blog_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'post',
+                model: 'blog',
                 key: 'id'
             }
         }
