@@ -95,9 +95,22 @@ footer {
   background-color: rgb(124, 9, 99);
   color: white;
 }
+<<<<<<< HEAD:public/js/style/style.css
 
 .butn-primary:active {
   background-color: white;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+=======
+
+.butn-primary:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.form-input3 {
+  width: 1000px;
+  height: 200px;
+>>>>>>> b902ec63855d1f5be8807026d532b3aad5609215:style.css
 }

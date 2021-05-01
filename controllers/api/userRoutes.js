@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const bcrypt = require('bcrypt');
 const { User } = require('../../models');
 
 // CREATE new user
@@ -20,3 +21,5 @@ router.post('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  module.exports = router;
