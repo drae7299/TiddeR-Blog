@@ -1,16 +1,17 @@
 [
     {
       "title": "The White Lotus",
-      "content": "All things Avatar: The Last Airbender & Legend of Korra Universe"
+      "content": "All things Avatar: The Last Airbender & Legend of Korra Universe",
+      "user_id": 3
     },
     {
         "title": "Toe Beans",
-        "content": "A place to share your cutest pet pics!"
-    
+        "content": "A place to share your cutest pet pics!",
+        "user_id": 2
     },
     {
         "title": "Coding Memes",
-        "content": "Share your favorite coding memes with fellow software developers"
-      
+        "content": "Share your favorite coding memes with fellow software developers",
+        "user_id": 1
     }
   ]

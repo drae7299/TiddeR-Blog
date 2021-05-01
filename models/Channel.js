@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 // create our Channel model
 class Channel extends Model {}
 
-// create fields/columns for Post model
+// create fields/columns for Channel model
 Channel.init(
     {
       id: {

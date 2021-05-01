@@ -13,15 +13,13 @@ Comment.init(
             autoIncrement: true
         },
 
-        vote_id: {
-            type: DataTypes.INTEGER,
-                allowNull: false,
-                references: {
-                    model: 'votes',
-                    key: 'id'}
-        },
-    
-    
+        // vote_id: {
+        //     type: DataTypes.INTEGER,
+        //         allowNull: false,
+        //         references: {
+        //             model: 'votes',
+        //             key: 'id'}
+        // },
         comment_text: {
             type: DataTypes.STRING,
             validate: {
