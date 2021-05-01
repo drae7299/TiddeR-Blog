@@ -10,16 +10,9 @@ Comment.init(
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
-
-        // vote_id: {
-        //     type: DataTypes.INTEGER,
-        //         allowNull: false,
-        //         references: {
-        //             model: 'votes',
-        //             key: 'id'}
-        // },
         comment_text: {
             type: DataTypes.STRING,
             validate: {

@@ -4,7 +4,6 @@ const { User, Channel, Comment, Blog } = require('../models');
 const userData = require('./userData.json');
 const channelData = require('./channelData.json');
 const commentData = require('./commentData.json');
-const voteData = require('./voteData.json');
 const blogData = require('./blogData.json');
 
 const seedDatabase = async () => {
@@ -21,11 +20,6 @@ const seedDatabase = async () => {
   });
 
   await Comment.bulkCreate(commentData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  await Vote.bulkCreate(voteData, {
     individualHooks: true,
     returning: true,
   });
