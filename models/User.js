@@ -35,9 +35,22 @@ User.init(
             // this means the password must be at least four characters long
             len: [8]
         }
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true 
+      }
     }
   },
-  
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user'
+  } 
 );
 
 module.exports = User;

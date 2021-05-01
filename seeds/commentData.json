@@ -1,13 +1,17 @@
 [
     {
-      "comment_text": "Wow, good point!"
-      
+      "comment_text": "Wow, good point!",
+      "user_id": 2,
+      "blog_id": 1
     },
     {
-        "comment_text": "I disagree - I think cats are better than dogs"
+        "comment_text": "I disagree - I think cats are better than dogs",
+        "user_id": 3,
+        "blog_id": 2
     },
     {
-        "comment_text": "great meme!"
-      
+        "comment_text": "great meme!",
+        "user_id": 1,
+        "blog_id": 3
     }
   ]
