@@ -12,5 +12,4 @@ router.use('/channel', channelRoutes);
 router.use('/comment', commentRoutes);
 router.use('/user', userRoutes);
 
-
 module.exports = router;
