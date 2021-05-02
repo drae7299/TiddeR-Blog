@@ -1,8 +1,19 @@
 const router = require('express').Router();
-const bcrypt = require('bcrypt');
-const { User } = require('../../models');
+// const bcrypt = require('bcrypt');
+const { User, Blog } = require('../../models');
 
-// CREATE new user
+// router.get('/', async (req,rez) => {
+//   try {
+//     const userData = await User.findAll({
+//       include: [{ model: Blog }],
+//     });
+//     res.status(200).json(userData);
+//   } catch (err) {
+//     res.status(500).json(err); 
+//   }
+// }); 
+
+// CREATE new user - working in insomnia but not UI 
 router.post('/signup', async (req, res) => {
     try {
       const dbUserData = await User.create({
@@ -14,6 +25,7 @@ router.post('/signup', async (req, res) => {
   
       req.session.save(() => {
         req.session.loggedIn = true;
+        req.session.user_id = dbUserData;  
   
         res.status(200).json(dbUserData);
       });
@@ -23,7 +35,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-// User Login
+// User Login - getting 500 error in insomnia 
 router.post('/login', async (req, res) => {
     try {
       const dbUserData = await User.findOne({
@@ -49,6 +61,7 @@ router.post('/login', async (req, res) => {
       }
   
       req.session.save(() => {
+        req.session.user_id = dbUserData.id;  
         req.session.loggedIn = true;
   
         res
@@ -60,5 +73,15 @@ router.post('/login', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end(); 
+    }
+  }); 
 
 module.exports = router;
