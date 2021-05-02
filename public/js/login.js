@@ -28,18 +28,18 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
     
     //get login form id's
-    const email = document.querySelector('#email-login').value.trim();
+    const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    if (email && password) {
-      const response = await fetch('/api/users/login', {
+    if (username && password) {
+      const response = await fetch('/api/user/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/api/channel');
       } else {
         alert('Failed to log in.');
       }
@@ -52,6 +52,6 @@ document
     .addEventListener('submit', signupFormHandler);
 
 //get login button/add listener for user log in
-// document
-//     .querySelector('.login-form')
-//     .addEventListener('submit', loginFormHandler);
+document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
