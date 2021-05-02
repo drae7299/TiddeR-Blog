@@ -1,17 +1,5 @@
 const router = require('express').Router();
-// const bcrypt = require('bcrypt');
-const { User, Blog } = require('../../models');
-
-// router.get('/', async (req,rez) => {
-//   try {
-//     const userData = await User.findAll({
-//       include: [{ model: Blog }],
-//     });
-//     res.status(200).json(userData);
-//   } catch (err) {
-//     res.status(500).json(err); 
-//   }
-// }); 
+const { User } = require('../../models');
 
 // CREATE new user - working in insomnia but not UI 
 router.post('/signup', async (req, res) => {
@@ -35,7 +23,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-// User Login - getting 500 error in insomnia 
+// User Login - working in insomnia, need bcrypt for it to work 
 router.post('/login', async (req, res) => {
     try {
       const dbUserData = await User.findOne({
@@ -62,7 +50,7 @@ router.post('/login', async (req, res) => {
   
       req.session.save(() => {
         req.session.user_id = dbUserData.id;  
-        req.session.loggedIn = true;
+        req.session.logged_in = true;
   
         res
           .status(200)
