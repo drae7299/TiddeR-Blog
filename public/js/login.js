@@ -48,10 +48,10 @@ const loginFormHandler = async (event) => {
 
 //get submit button/add listener for user sign up
 document
-    .querySelector('.login-form')
+    .querySelector('#sign-up-btn')
     .addEventListener('submit', signupFormHandler);
 
 //get login button/add listener for user log in
 document
-    .querySelector('.login-form')
+    .querySelector('#login-btn')
     .addEventListener('submit', loginFormHandler);
