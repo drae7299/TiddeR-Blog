@@ -1,10 +1,11 @@
 <section class="card">
+   <h3>{{logged_in}}</h3>
     {{!-- when a blog post is click, if the user is logged in, it brings them to the post in the channel. If not logged in, it prompts them to login --}}
-    {{#if logged_in}}
+    {{!-- {{#if logged_in}} --}}
     <a href="/channel/blog/{{id}}">
-    {{else}}
-    <a href="/login">
-    {{/if}}
+    {{!-- {{else}} --}}
+    {{!-- <a href="/login">
+    {{/if}} --}}
         <h1>{{blog.channel_id}}</h1>
         <h3>{{blog_text}}</h3>
         <p>By: {{blog.user_id}}</p>

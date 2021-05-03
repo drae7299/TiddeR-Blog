@@ -14,9 +14,9 @@
     </h1>
     <nav>
     <a href="/">Home</a>
-    {{!-- <a id="" href="/login">Login</a> --}}
+
     {{#if logged_in}}
-    <a id="logout" class="btn-no-style">Logout</a>
+    <a id="logout" href='/login' class="btn-no-style">Logout</a>
     {{else}}
     <a id="" href="/login">Login</a>
     {{/if}}
