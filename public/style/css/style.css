@@ -1,17 +1,27 @@
 body {
     color:rgb(124, 9, 99);
-    background-color:rgb(17, 148, 94);
+    background-color:rgb(148, 177, 165);
     border-style: double;
     height: 100%;
   }
   
-  .header {
-    height: 15%;
+  header {
+    height: 220px;
     border-style: double;
   }
-  h1 {
-    float: left;
-    
+  .links {
+    margin-top: -250px;
+    margin-right: 8px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color:rgb(124, 9, 99);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
   }
   .hero {
     margin-bottom: 10px;
@@ -27,7 +37,7 @@ body {
   
   }
   
-   .links {
+   nav {
     flex-wrap: nowrap;
     flex-direction: row;
     float: right;
@@ -73,7 +83,35 @@ body {
     height: 30px;
     border-style: solid;
   }
-  #button {
+  #loginBtn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color:rgb(124, 9, 99);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-left: 100px;
+    padding-top: -5px;
+    margin-top: 5px;
+    
+  }
+  
+  #loginBtn:hover {
+    background-color: rgb(124, 9, 99);
+    color: white;
+  }
+  
+  #loginBtn:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #signUpBtn {
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -91,13 +129,39 @@ body {
     
   }
   
-  .btn-primary:hover {
+  #signUpBtn:hover {
     background-color: rgb(124, 9, 99);
     color: white;
   }
   
-  .butn-primary:active {
+  #signUpBtn:active {
     background-color: white;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  }
+  .login-card {
+   margin-left: 40%;
+   margin-top: 130px;
+   font-size: xx-large;
+  }
+
+  .signup-card {
+    margin-left: 40%;
+    margin-top: 130px;
+    font-size: xx-large;
+   }
+  .mainCards {
+    height: 700px;
+    margin-bottom: 30px;
+  }
+  .forms login-form{
+    font-size: xx-large;
+  }
+
+  img.logo{
+    margin-bottom: 25px;
+  }
+
+  .container{
+    margin-top: 10px;
   }
