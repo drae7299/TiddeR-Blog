@@ -1,19 +1,20 @@
 [
-    {
-      "blog_text": "Opinion: Appa is the greatest of all time",
-      "channel_id": 1,
-      "user_id": 1
-      
-    },
-    {
-        "blog_text": "FACT: dogs are greater than cats",
-        "channel_id": 2,
-        "user_id": 2
-    },
-    {
-        "blog_text": "*insert funny code meme here*",
-        "channel_id": 3,
-        "user_id": 3
-      
-    }
-  ]
+  {
+    "id": 1,
+    "blog_text": "Opinion: Appa is the greatest of all time",
+    "channel_id": 1,
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "blog_text": "FACT: dogs are greater than cats",
+    "channel_id": 2,
+    "user_id": 2
+  },
+  {
+    "id": 3,
+    "blog_text": "*insert funny code meme here*",
+    "channel_id": 3,
+    "user_id": 3
+  }
+]

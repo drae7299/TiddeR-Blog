@@ -11,6 +11,10 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username']
         },
+        {
+          model: Channel,
+          attributes: ['title']
+        }
       ],
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true})); 
@@ -25,24 +29,25 @@ router.get('/', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/', withAuth, async (req, res) => {
-    try {
-      // Find the logged in user based on the session ID
-      const userData = await User.findAll({
-        attributes: { exclude: ['password'] },
-        include: [{ model: Blog }],
-      });
+// do we need this on the homepage route??
+// router.get('/', withAuth, async (req, res) => {
+//     try {
+//       // Find the logged in user based on the session ID
+//       const userData = await User.findAll({
+//         attributes: { exclude: ['password'] },
+//         include: [{ model: Blog }],
+//       });
   
-      const user = userData.get({ plain: true });
+//       const user = userData.get({ plain: true });
   
-      res.render('signup', {
-        ...user,
-        logged_in: true
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+//       res.render('signup', {
+//         ...user,
+//         logged_in: true
+//       });
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
 
 // show channels page - behind authentication
 router.get('/channel', withAuth, async (req, res) => {
@@ -73,10 +78,11 @@ router.get('/channel/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: { exclude: ['password'] }
+          attributes: ['username']
         },
         {
-          model: Blog
+          model: Blog,
+          attributes: ['blog_text','user_id']
         },
         {
           model: Comment
