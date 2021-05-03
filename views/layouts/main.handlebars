@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
+  <title>TiddeR</title>
   <link rel="stylesheet" href="/style/css/style.css">
 </head>
 
@@ -14,12 +14,12 @@
     </h1>
     <nav>
     <a href="/">Home</a>
-    <a id="" href="/login">Login</a>
-    {{!-- {{#if logged_in}}
+    {{!-- <a id="" href="/login">Login</a> --}}
+    {{#if logged_in}}
     <a id="logout" class="btn-no-style">Logout</a>
     {{else}}
     <a id="" href="/login">Login</a>
-    {{/if}} --}}
+    {{/if}}
   </nav>
   </header>
   
@@ -30,10 +30,9 @@
       {{{body}}}
     </div>
   </main>
-  <script src="../js/login.js"></script>
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 </body>
 
 </html>

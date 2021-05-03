@@ -1,7 +1,6 @@
 //function for signing up
-const signupFormHandler = async (event) => {
+const signupFormSubmit = async (event) => {
     event.preventDefault();
-
     //get signup form id's
     const name = document.querySelector('#name-signup').value.trim();
     const username = document.querySelector('#username-signup').value.trim();
@@ -14,7 +13,6 @@ const signupFormHandler = async (event) => {
         body: JSON.stringify({ name, username, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
       if (response.ok) {
         document.location.replace('/');
       } else {
@@ -39,7 +37,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/api/channel');
+        document.location.replace('/');
       } else {
         alert('Failed to log in.');
       }
@@ -48,10 +46,10 @@ const loginFormHandler = async (event) => {
 
 //get submit button/add listener for user sign up
 document
-    .querySelector('#sign-up-btn')
-    .addEventListener('submit', signupFormHandler);
+    .querySelector('#signUpBtn')
+    .addEventListener('click', signupFormSubmit);
 
 //get login button/add listener for user log in
 document
-    .querySelector('#login-btn')
-    .addEventListener('submit', loginFormHandler);
+    .querySelector('#loginBtn')
+    .addEventListener('click', loginFormHandler);
