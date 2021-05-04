@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
     color:rgb(124, 9, 99);
@@ -146,7 +147,7 @@ nav {
 .login-signup-btn {
     display: flex;
     cursor: pointer;
-    color: #dcdcdc;;
+    color: #dcdcdc;
     background-color: rgb(124, 9, 99);
     border: .1px solid rgb(124, 9, 99);
     border-radius: 25px;
@@ -296,4 +297,44 @@ main {
 
 .blog-title {
     border-bottom: .1px solid black;
+}
+
+.channel-search-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.channel-search-cont form, .channel-search-cont div {
+    display: flex;
+}
+
+#search-for-channel-btn {
+    height: 100%;
+
+}
+.new-channel-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-channel-create p, .new-channel-create a {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#create-channel-redirect {
+    color: #dcdcdc;
+    background-color: rgb(124, 9, 99);
+    border: .1px solid rgb(124, 9, 99);
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#create-channel-redirect:hover {
+    transition: .5s;
+    background-color: rgb(192, 17, 154);
 }
