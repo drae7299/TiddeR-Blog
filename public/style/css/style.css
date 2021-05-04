@@ -1,15 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 body {
     color:rgb(124, 9, 99);
     background-color:rgb(148, 177, 165);
-    border-style: double;
     height: 98%;
-  }
+}
   
-  header {
-    height: 210px;
-    border-style: double;
-  }
-  .links {
+header {
+    display: flex;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+#header-btns {
+    display: flex;
+   
+}
+
+#tidder-title {
+    display: flex;
+}
+
+/* styles homepage nav buttons */
+.homepge-btn {
+    padding: 7px 12px 3px 12px;
+    margin: 0px 5px 0px 5px;
+    border-radius: 25px;
+    height: 100%;
+    text-align: center;
+}
+
+.nav-btn {
+    box-shadow: 0 50px 50px -50px black;
+}
+
+#home-btn {
+    color:rgb(124, 9, 99);
+    background-color: #dcdcdc;
+    box-shadow: 0 50px 50px -50px black;
+}
+
+#home-btn:hover {
+    transition: .5s;
+    background-color: #fff2f2;
+}
+
+#login-nav-btn {
+    color: #dcdcdc;;
+    background-color: rgb(124, 9, 99);
+}
+
+#login-nav-btn:hover {
+    transition: .5s;
+    background-color: rgb(192, 17, 154);
+}
+
+#logout {
+    color: #dcdcdc;;
+    background-color: rgb(124, 9, 99);
+}
+
+#logout:hover {
+    transition: .5s;
+    background-color: rgb(192, 17, 154);
+}
+
+#signup-nav-btn {
+    color: rgb(124, 9, 99);
+    background-color: white;
+}
+
+#signup-nav-btn {
+    transition: .5s;
+    background-color: #fff2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*   .links {
     margin-top: -250px;
     margin-right: 8px;
     display: inline-block;
@@ -22,55 +95,42 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-  }
+  } */
+
   .hero {
     margin-bottom: 10px;
     float: top;
   }
   
-  .topBorder{
+/*   .topBorder{
     display: inline-block;
     font-size: 48px;
     color: crimson;
     border-style: solid;
     width:100%;
   
-  }
+  } */
   
-   nav {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    float: right;
+nav {
+    padding: 10px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 20px;
     color: crimson;
-  }
+}
   
-  .header nav ul li {
+/*   .header nav ul li {
     display: inline-block;
     margin-left: 45px;
     margin-right: 10px;
     padding-top: 15px;
     margin-right: 20px;
-  }
+  } */
   
-  section {
+/*   section {
       margin-top: 200px;
       margin-bottom: 200px;
       border-style:solid;
-  }
-  
-  .forms {
-    margin-left: 40%;
-    margin-right: 40%;
-    height: 100px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    font-style: oblique;
-    text-decoration: solid;
-  }
+  } */
   
   aside {
     position: absolute;
@@ -83,75 +143,91 @@ body {
     height: 30px;
     border-style: solid;
   }
-  #loginBtn {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    color:rgb(124, 9, 99);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    margin-left: 100px;
-    padding-top: -5px;
-    margin-top: 5px;
-    
-  }
-  
-  #loginBtn:hover {
-    background-color: rgb(124, 9, 99);
-    color: white;
-  }
-  
-  #loginBtn:active {
-    background-color: white;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
 
-  #signUpBtn {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+.login-signup-btn {
+    display: flex;
     cursor: pointer;
-    text-align: center;
-    
-    outline: none;
-    color:rgb(124, 9, 99);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    margin-left: 100px;
-    padding-top: -5px;
-    margin-top: 5px;
-    
-  }
-  
-  #signUpBtn:hover {
+    color: #dcdcdc;
     background-color: rgb(124, 9, 99);
-    color: white;
-  }
+    border: .1px solid rgb(124, 9, 99);
+    border-radius: 25px;
+    padding: 7px 12px 3px 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
   
-  #signUpBtn:active {
-    background-color: white;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  .login-card {
-   margin-left: 40%;
-   margin-top: 80px;
-   margin-bottom: 15px;
-   font-size: xx-large;
-  }
+.login-signup-btn:hover {
+    background-color: rgb(192, 17, 154);
+    transition: 1s;
+}
 
-  .signup-card {
-    margin-left: 40%;
-    margin-top: 80px;
-    margin-bottom: 15px;
-    font-size: xx-large;
-   }
+
+.login-signup-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    margin-top: 100px;
+    border: .5px solid black;
+    border-radius: 25px;
+    max-width: 100%;
+    height: 300px;
+    font-size: 2em;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: #dcdcdc;
+    box-shadow: 0 50px 50px -50px black;
+}
+
+.signup-card {
+    height: 400px;
+}
+
+#name-signup {
+    width: 250px;
+}
+
+#username-signup {
+    width: 194px;
+}
+
+#email-signup {
+    width: 255px;
+}
+
+#password-signup {
+    width: 202px;
+}
+
+#password-login {
+    width: 173px;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-input {
+    padding: 6px 10px;
+    margin-bottom: 5px;
+}
   .mainCards {
     margin-top: -15px;
   }
@@ -166,3 +242,99 @@ body {
   .container{
     margin-top: 10px;
   }
+
+/* homepage blog-posts display */
+.content-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 50px 200px;
+}
+
+/* .blog-display {
+    display: flex;
+    max-width: 80%;
+    margin: 50px 0 50px 0;
+    height: 200px;
+} */
+
+.blog-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #dcdcdc;
+    color: black;
+    border: .5px solid black;
+    box-shadow: 0 50px 50px -50px black;
+    border-radius: 10px;
+    width: 30rem;
+    margin: 50px 0 50px 0;
+    height: 200px;
+}
+
+.blog-info {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.blog-info h2, .blog-info h3, .blog-info p {
+    margin: 0 0 20px 0;
+}
+
+.comment-likes {
+    display: flex;
+    justify-content: space-around;
+    border-top: .1px solid black;
+}
+
+.comment-likes p {
+    display: flex;
+    padding: 5px;
+}
+
+.blog-title {
+    border-bottom: .1px solid black;
+}
+
+.channel-search-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.channel-search-cont form, .channel-search-cont div {
+    display: flex;
+}
+
+#search-for-channel-btn {
+    height: 100%;
+
+}
+.new-channel-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-channel-create p, .new-channel-create a {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#create-channel-redirect {
+    color: #dcdcdc;
+    background-color: rgb(124, 9, 99);
+    border: .1px solid rgb(124, 9, 99);
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#create-channel-redirect:hover {
+    transition: .5s;
+    background-color: rgb(192, 17, 154);
+}

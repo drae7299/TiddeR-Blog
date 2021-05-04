@@ -1,0 +1,114 @@
+h1 {
+    padding: 10px;
+    /* position: absolute; */
+    /* right: 500px; */
+    width: 100%;
+    height: 50%;
+    font-size: 45px;
+}
+  
+h1:after {
+    /* position: absolute; */
+    content: "";
+    width: 100%;
+    height: 50%;
+    line-height: 48px;
+    left: 30%;
+    top: 50%;
+    animation: TiddeR 8s cubic-bezier(0.1, -0.6, 0.2, 0) 1;
+    animation-fill-mode: forwards;
+}
+  
+  
+@keyframes TiddeR {
+    0% {
+      content: "R";
+    }
+    4% {
+      content: "Re";
+    }
+    8% {
+      content: "Red";
+    }
+    12% {
+      content: "Redd";
+    }
+    16% {
+      content: "Reddi";
+    }
+    20% {
+      content: "ReddiT";
+    }
+    24% {
+      content: "ReddiT";
+    }
+    28% {
+      content: "ReddiT";
+    }
+    29% {
+        content: "TiddeR";
+    }
+    30% {
+        content: "ReddiT";
+    }
+    31% {
+        content: "ReddiT";
+    }
+    32% {
+      content: "TiddeR";
+    }
+    33% {
+        content: "TiddeR";
+    }
+    36% {
+      content: "ReddiT";
+    }
+    40% {
+      content: "ReddiT";
+    }
+    44% {
+      content: "ReddiT";
+    }
+    48% {
+      content: "ReddiT";
+    }
+    52% {
+      content: "Reddi";
+    }
+    56% {
+      content: "Redd";
+    }
+    60% {
+      content: "Red";
+    }
+    64% {
+      content: "Re";
+    }
+    68% {
+      content: "R";
+    }
+    72% {
+      content: "";
+    }
+    76% {
+      content: "T";
+    }
+    80% {
+      content: "Ti";
+    }
+    84% {
+      content: "Tid";
+    }
+    88% {
+      content: "Tidd";
+    }
+    92% {
+      content: "Tidde";
+    }
+    96% {
+      content: "TiddeR";
+    }
+    100% {
+      content: "TiddeR";
+    }
+}

@@ -5,26 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TiddeR</title>
+  <link rel="stylesheet" href="/style/css/titleAnim.css">
   <link rel="stylesheet" href="/style/css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1><img src="/style/css/5b0b1ea3f3e141508f73f59dc985a637.png" class="logo"></img></title>
+  <header >
+    <h1 id="tidder-title">{{!-- <img src="/style/css/5b0b1ea3f3e141508f73f59dc985a637.png" class="logo"></img></title> --}}
     </h1>
-    <nav class="links">
-    <a href="/">Home</a>
+    <nav id="header-btns">
+        <a id="home-btn" class="homepge-btn" href="/">Home</a>
 
-    {{#if logged_in}}
-    <a id="logout" href='/login' class="btn-no-style">Logout</a>
-    {{else}}
-    <a id="" href="/login">Login</a>
-    {{/if}}
-  </nav>
+        {{#if logged_in}}
+        <a id="logout" class="homepge-btn nav-btn" href='/' class="btn-no-style">Logout</a>
+        {{else}}
+        <a id="login-nav-btn" class="homepge-btn nav-btn" href="/login">Login</a>
+        <a id="signup-nav-btn" class="homepge-btn nav-btn" href="/signup">Signup</a>
+        {{/if}}
+    </nav>
   </header>
   
   <main>
-    <div class="gallery">
+    <div class="content-div">
       {{{body}}}
     </div>
   </main>
