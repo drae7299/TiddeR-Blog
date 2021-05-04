@@ -293,3 +293,7 @@ main {
     display: flex;
     padding: 5px;
 }
+
+.blog-title {
+    border-bottom: .1px solid black;
+}

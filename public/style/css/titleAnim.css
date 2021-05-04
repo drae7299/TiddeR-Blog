@@ -5,9 +5,9 @@ h1 {
     width: 100%;
     height: 50%;
     font-size: 45px;
-  }
+}
   
-  h1:after {
+h1:after {
     /* position: absolute; */
     content: "";
     width: 100%;
@@ -15,12 +15,12 @@ h1 {
     line-height: 48px;
     left: 30%;
     top: 50%;
-    animation: TiddeR 5s linear 1;
+    animation: TiddeR 8s cubic-bezier(0.1, -0.6, 0.2, 0) 1;
     animation-fill-mode: forwards;
-  }
+}
   
   
-    @keyframes TiddeR {
+@keyframes TiddeR {
     0% {
       content: "R";
     }
@@ -45,11 +45,23 @@ h1 {
     28% {
       content: "ReddiT";
     }
+    29% {
+        content: "TiddeR";
+    }
+    30% {
+        content: "ReddiT";
+    }
+    31% {
+        content: "ReddiT";
+    }
     32% {
-      content: "ReddiT";
+      content: "TiddeR";
+    }
+    33% {
+        content: "TiddeR";
     }
     36% {
-      content: "TiddeR";
+      content: "ReddiT";
     }
     40% {
       content: "ReddiT";
