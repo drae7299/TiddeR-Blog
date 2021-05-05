@@ -54,6 +54,7 @@ document
     .querySelector('#create-new-channel-submit')
     .addEventListener('click', createNewChannel);
 
+
 /* function to pop up form to create new channel */
 function openForm() {
     document.querySelector("#create-channel-popup").style.display = "inline";
