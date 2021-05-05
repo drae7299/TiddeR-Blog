@@ -1,0 +1,19 @@
+<section class="blog-display">
+    <div class="blog-div">
+        <div class="blog-info">
+            <h2 class='blog-title'> written by: {{blog.user.username}} ({{blog.user.name}})</h2>
+            <h3>{{blog.blog_text}}</h3>
+            
+        </div>
+        <div class="comment-likes">
+            <div>
+                {{#each blog.comments as |comment|}}
+                {{> comment-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div>
+
+
+</section>
