@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
           model: Channel,
           attributes: ['title']
         }
+
       ],
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true})); 
