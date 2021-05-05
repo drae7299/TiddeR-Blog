@@ -15,9 +15,15 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/');
+        document.location.replace('/1');
+        document.location.replace('/');
+        /* window.location.href = "/"; */
       } else {
         alert('Failed to log in.');
       }
+      /* if (response.ok) {
+        document.location.replace('/');
+      } */
     }
 };
 
