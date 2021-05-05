@@ -1,13 +1,38 @@
+{{!-- search for channel div --}}
 <section class='channel-search-cont'>
     <form action="">
-        <input class="form-input" type="text" placeholder="Search For A Blog Channel">
+        <input class="form-input search-channel" type="text" placeholder="Search For A Blog Channel">
         <button id="search-for-channel-btn" type="submit">Search</button>
     </form>
     <div class='new-channel-create'>
         <p>Cant find the Channel you're looking for?</p>
-        <a id="create-channel-redirect" class=" nav-btn" href="/create-channel">Create Channel</a>
+        <a id="create-channel-redirect" class=" nav-btn">Create Channel</a>
     </div>
 </section>
+
+{{!-- display blog posts --}}
 {{#each blogs as |blog|}}
 {{> blog-details}}
 {{/each}}
+
+{{!-- channel create popup --}}
+<section id="create-channel-popup">
+    <form action="" class="create-channel-form">
+        <div>
+            <h2>Create A New Channel</h2>
+            <button class='closeout-btn'>X</button>
+        </div>
+        <div>
+            <label for="create-channel-title"><b>Channel Title:</b></label>
+            <input type="text" placeholder="Enter Channel Title">
+        </div>
+        <div>
+            <label for="create-channel-desc"><b>Channel Description:</b></label>
+            <input type="text" placeholder="Enter Channel Description">
+        </div>
+        <div>
+            <button id="create-new-channel-submit" class="btn btn-primary login-signup-btn">Create Channel!</button>
+        </div>
+    </form>
+</section>
+<script src="/js/channels.js"></script>
