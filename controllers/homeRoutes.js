@@ -11,13 +11,13 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username']
         },
-        /* {
-          model: Channel,
-          attributes: ['title']
-        } */
+        {
+          model: Channel
+        } 
       ],
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true})); 
+    console.log(blogs)
     console.log('LOGGED IN ', req.session.logged_in)
     res.render('homepage', {
       blogs,
@@ -50,26 +50,26 @@ router.get('/', async (req, res) => {
 //   });
 
 // show channels page - behind authentication
-router.get('/channel', withAuth, async (req, res) => {
-  try {
-    const channelData = await Channel.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['username']
-        },
-      ],
-    });
-    const channels = channelData.map((channel) => channel.get( {plain: true})); 
+// router.get('/channel', withAuth, async (req, res) => {
+//   try {
+//     const channelData = await Channel.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['username']
+//         },
+//       ],
+//     });
+//     const channels = channelData.map((channel) => channel.get( {plain: true})); 
 
-    res.render('channel', {
-      ...channels,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err); 
-  }
-}); 
+//     res.render('channel', {
+//       ...channels,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err); 
+//   }
+// }); 
 
 // show one channel - behind authentication
 router.get('/channel/:id', withAuth, async (req, res) => {
@@ -77,22 +77,18 @@ router.get('/channel/:id', withAuth, async (req, res) => {
     const channelData = await Channel.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ['username']
+          model: User
         },
         {
           model: Blog,
-          attributes: ['blog_text','user_id']
-        },
-        {
-          model: Comment
+          include: [{model: User}]
         },
       ],
     });
     const channel = channelData.get({ plain: true }); 
-
+    console.log(channel)
     res.render('channel', {
-      ...channel,
+      channel,
       logged_in: req.sessions.logged_in
     });
   } catch (err) {

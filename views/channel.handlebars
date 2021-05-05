@@ -6,4 +6,12 @@
     {{/each}}
   </section>
 </section> --}}
-<h2></h2>
+
+
+<h2>{{channel.title}}</h2>
+<p>{{channel.content}}</p>
+<div>
+  {{#each channel.blogs as |blog|}}
+  {{> channel-details}}
+  {{/each}}
+</div>
