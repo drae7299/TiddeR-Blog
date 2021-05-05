@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+/* const createNewChannel = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#channel-name').value.trim();
@@ -37,11 +37,32 @@ const delButtonHandler = async (event) => {
     }
   }
 };
-
+console.log('hello');
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
 document
   .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .addEventListener('click', delButtonHandler); */
+
+/* function to pop up form to create new channel */
+function openForm() {
+    document.querySelector("#create-channel-popup").style.display = "block";
+}
+
+/* function to close pop up form */
+function closeForm() {
+    document.querySelector("create-channel-popup").style.display = "none";
+}
+
+document
+    .querySelector('#create-channel-redirect')
+    .addEventListener('click', openForm)
+
+document
+    .querySelector('.closeout-btn')
+    .addEventListener('click', closeForm)
+
+  
+
