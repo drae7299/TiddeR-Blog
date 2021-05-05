@@ -61,7 +61,7 @@ document
     .addEventListener('click', openForm)
 
 document
-    .querySelector('.closeout-btn')
+    .querySelector('#closeout-btn')
     .addEventListener('click', closeForm)
 
   
