@@ -20,8 +20,9 @@ router.get('/', async (req, res) => {
     console.log(blogs)
     console.log('LOGGED IN ', req.session.logged_in)
     res.render('homepage', {
+      layout: 'main',
+      logged_in: req.session.logged_in,
       blogs,
-      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err); 

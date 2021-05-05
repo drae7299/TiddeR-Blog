@@ -7,26 +7,22 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#password-login').value.trim();
   
     if (username && password) {
-      const response = await fetch('/api/user/login', {
-        method: 'POST',
-        body: JSON.stringify({ username, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-        document.location.replace('/1');
-        document.location.replace('/');
-        /* window.location.href = "/"; */
-      } else {
-        alert('Failed to log in.');
+      try {
+        const response = await fetch('/api/user/login', {
+            method: 'POST',
+            body: JSON.stringify({ username, password }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+          console.log(response);
+          if (response.ok) {
+            document.location.replace('/'); }
+      } catch(error) {
+        alert(error.message)
+
       }
-      /* if (response.ok) {
-        document.location.replace('/');
-      } */
     }
 };
-
+console.log
 //get login button/add listener for user log in
 document
     .querySelector('#loginBtn')

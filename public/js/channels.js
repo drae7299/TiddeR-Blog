@@ -1,4 +1,4 @@
-/* const { json } = require("sequelize/types"); */
+/* window.location.reload(); */
 
 /* function for creating new channel */
 const createNewChannel = async (event) => {
@@ -51,12 +51,12 @@ document
 
 //selector for getting create channel form submission
 document
-    .querySelector('#create-new-channel-submit');
-    addEventListener('click', createNewChannel)
+    .querySelector('#create-new-channel-submit')
+    .addEventListener('click', createNewChannel);
 
 /* function to pop up form to create new channel */
 function openForm() {
-    document.querySelector("#create-channel-popup").style.display = "block";
+    document.querySelector("#create-channel-popup").style.display = "inline";
 }
 
 /* function to close pop up form */

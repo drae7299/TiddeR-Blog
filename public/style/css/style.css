@@ -71,10 +71,10 @@ header {
 
 #signup-nav-btn {
     color: rgb(124, 9, 99);
-    background-color: white;
+    background-color: #dcdcdc;
 }
 
-#signup-nav-btn {
+#signup-nav-btn:hover {
     transition: .5s;
     background-color: #fff2f2;
 }
@@ -350,7 +350,7 @@ main {
     bottom: 60%;
     right: 40%;
     border: .5px solid black;
-    z-index: 9;
+    /* z-index: 9; */
     background-color: #dcdcdc;
     border-radius: 10px;
     padding: 10px;
