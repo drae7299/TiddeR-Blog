@@ -1,28 +1,31 @@
-/* const createNewChannel = async (event) => {
+/* const { json } = require("sequelize/types"); */
+
+/* function for creating new channel */
+const createNewChannel = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#channel-name').value.trim();
-  const needed_funding = document.querySelector('#channel-form').value.trim();
-  const description = document.querySelector('#channel-desc').value.trim();
+  const channelTitle = document.querySelector('#channel-title-submit').value.trim();
+  const channelDesc = document.querySelector('#channel-desc-submit').value.trim();
 
-  if (name && needed_funding && description) {
-    const response = await fetch('/api/channel', {
+  if (channelTitle && channelDesc) {
+    const response = await fetch('/api/channel/create', {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ channelTitle, channelDesc }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/channel/');
     } else {
-      alert('Failed to create project');
+      
+      alert('Failed to create channel');
     }
   }
 };
 
-const delButtonHandler = async (event) => {
+/* const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -36,15 +39,20 @@ const delButtonHandler = async (event) => {
       alert('Failed to delete project');
     }
   }
-};
-console.log('hello');
-document
+}; */
+
+/* document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
 document
   .querySelector('.project-list')
   .addEventListener('click', delButtonHandler); */
+
+//selector for getting create channel form submission
+document
+    .querySelector('#create-new-channel-submit');
+    addEventListener('click', createNewChannel)
 
 /* function to pop up form to create new channel */
 function openForm() {
@@ -56,13 +64,14 @@ function closeForm() {
     document.querySelector("create-channel-popup").style.display = "none";
 }
 
+/* get ids for create channel popup/close */
 document
     .querySelector('#create-channel-redirect')
-    .addEventListener('click', openForm)
+    .addEventListener('click', openForm);
 
 document
     .querySelector('#closeout-btn')
-    .addEventListener('click', closeForm)
+    .addEventListener('click', closeForm);
 
   
 
