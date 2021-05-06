@@ -16,7 +16,25 @@
   {{/each}}
 </div>
 
+{{!-- create blog post popup --}}
+<section id="create-blog-popup">
+    <form action="" class="create-blog-form">
+        <div>
+            <h2>Create A New Blog</h2>
+            <button id='closeout-btn'>X</button>
+        </div>
+        <div id="blog-text-area">
+            <label id="create-blog-text" for="create-blog-text"><b>Blog Text:</b></label>
+            <textarea id="blog-title-submit" type="text" placeholder="Enter Channel Title"></textarea>
+        </div>
+        <div>
+            <button id="create-new-blog-submit" class="btn btn-primary login-signup-btn">Create Channel!</button>
+        </div>
+    </form>
+</section>
+
 <div class='new-channel-create'>
         <p class='blog-prompt'>Want to add to the conversation?</p>
-        <a id="create-blog" class=" nav-btn">Click Here</a>
-    </div>
+        <a id="create-blog-redirect" class=" nav-btn">Click Here</a>
+</div>
+<script src="/js/blog.js"></script>

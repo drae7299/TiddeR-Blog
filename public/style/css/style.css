@@ -344,10 +344,12 @@ main {
     background-color: rgb(192, 17, 154);
 }
 
-#create-channel-popup {
+#create-channel-popup, #create-blog-popup {
     display: none;
     position: fixed;
-    bottom: 60%;
+    width: 20%;
+    height: 30%;
+    bottom: 40%;
     right: 40%;
     border: .5px solid black;
     /* z-index: 9; */
@@ -357,13 +359,16 @@ main {
     animation: 3s ease-in;
 }
 
-.create-channel-form {
+.create-channel-form, .create-blog-form {
     display: flex; 
     justify-content: space-between;
+    align-items: center;
     flex-direction: column; 
+    height: 100%;
+    width: 100%
 }
 
-.create-channel-form div {
+.create-channel-form div, .create-channel-form div {
     display: flex;
     padding: 10px;  
 }
@@ -378,8 +383,17 @@ main {
     border-radius: 10%;
 }
 
-#create-new-channel-submit {
+#create-new-channel-submit, #create-new-blog-submit {
     align-self: center;
+}
+
+#blog-text-area {
+    width: 200px;
+}
+
+#create-blog-text {
+    width: 80%;
+    height: 60%;
 }
 
 #create-blog {
