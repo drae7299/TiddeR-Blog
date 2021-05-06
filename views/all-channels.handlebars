@@ -1,9 +1,14 @@
 <h2>All Channels</h2>
 
 {{#each channels as |channel|}}
-<div class ='blog-div'>
-<h3>{{channel.title}}</h3>
-<p>{{channel.content}}</p>
-<p>channel created by: {{user.username}}</p>
-{{/each}}
+<a href="/channel/{{channel.id}}">
+<div class="channel-div">
+    <div class="channel-info">
+        <h2 class='channel-title'>{{channel.title}}</h2>
+        <p class='channel-content'>{{channel.content}}</p>
+        </br>
+        <p class='channel-creator'>Channel created by: {{user.username}}</p>
+    </div>
 </div>
+</a>
+{{/each}}
