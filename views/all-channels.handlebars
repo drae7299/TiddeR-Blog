@@ -1,0 +1,14 @@
+<h2>All Channels</h2>
+
+{{#each channels as |channel|}}
+<a href="/channel/{{channel.id}}">
+<div class="channel-div">
+    <div class="channel-info">
+        <h2 class='channel-title'>{{channel.title}}</h2>
+        <p class='channel-content'>{{channel.content}}</p>
+        </br>
+        <p class='channel-creator'>Channel created by: {{user.username}}</p>
+    </div>
+</div>
+</a>
+{{/each}}

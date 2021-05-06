@@ -1,25 +1,42 @@
-# TiddeR Blog - MVC Group Project 
+ 
+  # TiddeR Blog - MVC Group Project
+  
+  ## Description  
+  Welcome to TiddeR Blog! With this application, a user can do many things! Easily navigate the pages by logging in or signing up. Once signed in, the user can freely look through blogs and even comment, like or create additional channels! This app uses basic authenticatio logic to make sure the user is logged in before gaining full access.
+  
+  ## Contents Table
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](license)
+  * [Contributions](contributions) 
+  * [Tests](tests)
+  * [Questions](questions) 
 
-## Description
+  ## Installation
+  The user will need to install the `Express`, `Sequalize` as well as `MySQL` `npm packages`.
 
-## Table of Contents
-- [Installation](#installation)
-- [Tests](#tests)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+  ## Usage
+  Use this app to share similar ideals and comments around topics. Even create a new topic of discussion to attract user attention.
 
-## Installation
-The user needs to install the `Express`, `Sequalize` & `MySQL` npm packages. It uses `Handlebars.js` as its template language. 
+  ## License
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) [MIT Link](https://opensource.org/licenses/BSD-3-Clause)
+ 
+  ## Contributions
+  Abdoul Bass, Brandon Hutchingson, Jordyn Mancini, Andre Rodriguez.
+  
+  ## Tests
+  No tests are need for this application.
 
-## Tests
-This app does not currently have a way to test it.
+  ## Demo
 
-## Usage 
-The user needs to have `node.js` & `mySQL` installed on their local machine.
+  ## Questions
+  Reach out to us via Githubs if there are any questions!
 
-## Contributing 
+  Github: [drae7299](https://www.github.com/)
+  [bHutchingson](https://www.github.com/)
+  [jordynnmancini](https://www.github.com/)
+   [ziz10](https://www.github.com/)
+  
+  Email: drae7299@gmail.com
+  
 
-
-## License 
-Licensed under the [MIT](./assets/LICENSE.txt) license.

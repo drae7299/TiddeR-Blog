@@ -4,35 +4,23 @@
 const createNewChannel = async (event) => {
   event.preventDefault();
 
-  const channelTitle = document.querySelector('#channel-title-submit').value.trim();
-  const channelDesc = document.querySelector('#channel-desc-submit').value.trim();
+  const title = document.querySelector('#channel-title-submit').value.trim();
+  const content = document.querySelector('#channel-desc-submit').value.trim();
 
-  if (channelTitle && channelDesc) {
-    try {
-        const response = await fetch('/api/channel/create', {
-            method: 'POST',
-            body: JSON.stringify({ channelTitle, channelDesc }),
-            headers: { 'Content-Type': 'application/json' },
-          });
-          if (response.ok) {
-            document.location.replace('/channel/'); }
-      } catch(error) {
-        alert(error.message)
-      }
-    /* const response = await fetch('/api/channel/create', {
+  if (title && content) {
+    const response = await fetch('/api/channel/create', {
       method: 'POST',
-      body: JSON.stringify({ channelTitle, channelDesc }),
+      body: JSON.stringify({ title, content }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/channel/');
+      document.location.replace('/channel');
     } else {
-      
       alert('Failed to create channel');
-    } */
+    }
   }
 };
 
@@ -60,6 +48,7 @@ document
   .querySelector('.project-list')
   .addEventListener('click', delButtonHandler); */
 
+  
 //selector for getting create channel form submission
 document
     .querySelector('#create-new-channel-submit')

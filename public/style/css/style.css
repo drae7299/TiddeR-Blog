@@ -381,3 +381,50 @@ main {
 #create-new-channel-submit {
     align-self: center;
 }
+
+#create-blog {
+    color: #dcdcdc;
+    font-size: 30px;
+    background-color: rgb(124, 9, 99);
+    border: .5px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.blog-prompt {
+    font-size: 25px; 
+}
+
+.channel-div {
+    display: flex;
+    flex-direction:column; 
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #dcdcdc;
+    color: black;
+    border: .5px solid black;
+    box-shadow: 0 50px 50px -50px black;
+    border-radius: 10px;
+    width: 30rem;
+    margin: 50px 0 50px 0;
+    height: auto; 
+}
+
+.channel-title {
+    border-bottom: .1px solid black;
+    text-align: center; 
+}
+
+.channel-content {
+    text-align: center; 
+}
+
+.channel-creator {
+    text-align: right; 
+}
+
+.channel-info {
+    display: flex;
+    flex-direction: column;
+}
