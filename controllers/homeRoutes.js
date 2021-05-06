@@ -51,26 +51,27 @@ router.get('/', async (req, res) => {
 //   });
 
 // show channels page - behind authentication
-// router.get('/channel', withAuth, async (req, res) => {
-//   try {
-//     const channelData = await Channel.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['username']
-//         },
-//       ],
-//     });
-//     const channels = channelData.map((channel) => channel.get( {plain: true})); 
+router.get('/channel', withAuth, async (req, res) => {
+  try {
+    const channelData = await Channel.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        },
+      ],
+    });
+    const channels = channelData.map((channel) => channel.get( {plain: true})); 
 
-//     res.render('channel', {
-//       ...channels,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err); 
-//   }
-// }); 
+    res.render('all-channels', {
+      layout: 'main',
+      logged_in: req.session.logged_in,
+      channels,
+    });
+  } catch (err) {
+    res.status(500).json(err); 
+  }
+}); 
 
 // show one channel - behind authentication
 router.get('/channel/:id', withAuth, async (req, res) => {
@@ -89,8 +90,9 @@ router.get('/channel/:id', withAuth, async (req, res) => {
     const channel = channelData.get({ plain: true }); 
     console.log(channel)
     res.render('channel', {
+      layout: 'main',
+      logged_in: req.session.logged_in,
       channel,
-      logged_in: req.sessions.logged_in
     });
   } catch (err) {
     res.status(500).json(err); 
@@ -116,8 +118,9 @@ router.get('/blog/:id', withAuth, async (req, res) => {
     const blog = blogData.get({ plain: true }); 
     console.log(blog)
     res.render('blog', {
+      layout: 'main',
+      logged_in: req.session.logged_in,
       blog,
-      logged_in: req.sessions.logged_in
     });
   } catch (err) {
     res.status(500).json(err); 
