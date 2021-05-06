@@ -8,7 +8,18 @@ const createNewChannel = async (event) => {
   const channelDesc = document.querySelector('#channel-desc-submit').value.trim();
 
   if (channelTitle && channelDesc) {
-    const response = await fetch('/api/channel/create', {
+    try {
+        const response = await fetch('/api/channel/create', {
+            method: 'POST',
+            body: JSON.stringify({ channelTitle, channelDesc }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+          if (response.ok) {
+            document.location.replace('/channel/'); }
+      } catch(error) {
+        alert(error.message)
+      }
+    /* const response = await fetch('/api/channel/create', {
       method: 'POST',
       body: JSON.stringify({ channelTitle, channelDesc }),
       headers: {
@@ -21,7 +32,7 @@ const createNewChannel = async (event) => {
     } else {
       
       alert('Failed to create channel');
-    }
+    } */
   }
 };
 

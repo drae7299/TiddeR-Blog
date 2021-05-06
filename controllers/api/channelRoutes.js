@@ -31,7 +31,7 @@ const withAuth = require('../../utils/auth');
 // }); 
 
 //working in insomnia when I remove withAuth & line 38 - withAuth directs to signup page if not signed in 
-router.post('/create', withAuth, async (req, res) => {
+router.post('/create'/* , withAuth */, async (req, res) => {
     try {
         const newChannel = await Channel.create({
         ...req.body,
