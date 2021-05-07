@@ -336,7 +336,14 @@ main {
 }
 
 #search-for-channel-btn {
-    height: 100%;
+    height: 30px;
+    width: 64px;
+    color:rgb(124, 9, 99);
+    background-color: #dcdcdc;
+    box-shadow: 0 50px 50px -50px black;
+    transition: .5s;
+    background-color: #fff2f2;
+    font-size: large;
 
 }
 .new-channel-create {
