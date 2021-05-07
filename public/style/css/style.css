@@ -293,7 +293,8 @@ main {
     border-radius: 10px;
     width: 30rem;
     margin: 50px 0 50px 0;
-    height: 200px;
+    min-height: 200px;
+    height: auto; 
 }
 
 .blog-info {
@@ -485,7 +486,8 @@ main {
     border-radius: 10px;
     width: 30rem;
     margin: 50px 0 50px 0;
-    height: 200px;
+    margin-top: -40px; 
+    height: auto;
 }
 
 .comment-header {
@@ -502,7 +504,7 @@ main {
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;
-    margin-left: 130px; 
+     
 
 }
 
@@ -514,11 +516,15 @@ main {
 }
 
 .comment-form{
-    position: relative; 
-    align-items: center;
-    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hidden {
     display: none; 
+}
+
+.blog-text {
+    font-weight: lighter;
 }

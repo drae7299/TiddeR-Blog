@@ -17,7 +17,7 @@ const createNewComment = async (event) => {
         });
         
         if (response.ok) {
-            document.location.replace('/channel');
+            document.location.reload();
         } else {
             alert('failed to add comment - please try again');
         }
