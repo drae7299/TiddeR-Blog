@@ -341,10 +341,13 @@ main {
     color:rgb(124, 9, 99);
     background-color: #dcdcdc;
     box-shadow: 0 50px 50px -50px black;
-    transition: .5s;
-    background-color: #fff2f2;
     font-size: large;
 
+}
+
+#search-for-channel-btn:hover{
+    transition: .5s;
+    background-color: #fff2f2;
 }
 .new-channel-create {
     display: flex;
