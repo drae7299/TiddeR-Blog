@@ -1,27 +1,33 @@
+<h2 class="blog-header">Blog Post written by {{blog.user.name}} ({{blog.user.username}})</h2>
 <section class="blog-display">
     <div class="blog-div">
         <div class="blog-info">
-            <h2 class='blog-title'> written by: {{blog.user.username}} ({{blog.user.name}}) <span id ="blog-id-workaround" class="hidden">{{blog.user_id}}</span></h2>
-            <h3>{{blog.blog_text}}</h3>
-            
-        </div>
-        <div class="comment-likes">
-            <div>
-                {{#each blog.comments as |comment|}}
-                {{> comment-details}}
-                {{/each}}
-            </div>
-            <div class="comment-form">
-            <form>
-                <label for="add a comment">What do you think?</label>
-                <textarea id="new-comment" name="new-comment" rows="5" cols="60"></textarea>
-                <input id="add-comment-btn" class="comment-button" type="submit" value="Add Comment">
-            </form>
-            </div>
+            <p class='blog-title'> Channel: {{blog.channel.title}} // {{format_date blog.createdAt}} {{format_time
+                blog.createdAt}}: </p>
+            <h3 class='blog-text'>{{blog.blog_text}}</h3>
         </div>
     </div>
-
-
+    <div class="comment-div">
+        <h3 class="comment-header">Comments</h3>
+        </br>
+        {{#each blog.comments as |comment|}}
+        {{> comment-details}}
+        {{/each}}
+    </div>
 </section>
+
+
+<div class="comment-form">
+    <form class='comment-form'>
+        <label for="add a comment">What do you think?</label>
+        <textarea id="new-comment" name="new-comment" rows="5" cols="60"></textarea>
+        <input id="add-comment-btn" class="comment-button" type="submit" value="Add Comment">
+    </form>
+</div>
+
+
+
+
+
 
 <script src="/js/comment.js"></script>
