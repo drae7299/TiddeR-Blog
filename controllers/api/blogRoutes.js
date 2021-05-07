@@ -35,7 +35,7 @@ router.get('/:id', withAuth, async (req, res) => {
 }); 
 
 // works in insomnia w/out withAuth
-router.post('/', withAuth, async (req, res) => {
+router.post('/create', withAuth, async (req, res) => {
     try {
         const newBlog = await Blog.create({
         ...req.body,
@@ -44,6 +44,7 @@ router.post('/', withAuth, async (req, res) => {
         res.status(200).json(newBlog);
     }   catch (err) {
         res.status(400).json(err); 
+        console.log(err)
     }
 }); 
 
