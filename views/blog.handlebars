@@ -1,7 +1,7 @@
 <section class="blog-display">
     <div class="blog-div">
         <div class="blog-info">
-            <h2 class='blog-title'> written by: {{blog.user.username}} ({{blog.user.name}})</h2>
+            <h2 class='blog-title'> written by: {{blog.user.username}} ({{blog.user.name}}) <span id ="blog-id-workaround" class="hidden">{{blog.user_id}}</span></h2>
             <h3>{{blog.blog_text}}</h3>
             
         </div>
@@ -17,3 +17,5 @@
 
 
 </section>
+
+<script src="/js/comment.js"></script>

@@ -518,3 +518,7 @@ main {
     align-items: center;
     margin-left: 35px;
 }
+
+.hidden {
+    display: none; 
+}
