@@ -442,3 +442,49 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+.comment-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(204, 199, 199); 
+    color: black;
+    border: .5px solid black;
+    box-shadow: 0 50px 50px -50px black;
+    border-radius: 10px;
+    width: 30rem;
+    margin: 50px 0 50px 0;
+    height: 200px;
+}
+
+.comment-header {
+    text-align: center; 
+    font-size: 30px; 
+    border-bottom: .5px solid black;
+}
+.comment-button{
+    text-align: center;
+    font-size: 20px; 
+    color: #dcdcdc;
+    background-color: rgb(124, 9, 99);
+    border: .5px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 130px; 
+
+}
+
+.each-comment {
+    padding: 10px; 
+    font-weight: lighter;
+    border: .5px solid black;
+
+}
+
+.comment-form{
+    position: relative; 
+    align-items: center;
+    margin-left: 35px;
+}
