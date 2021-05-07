@@ -49,6 +49,26 @@ header {
     background-color: #fff2f2;
 }
 
+#channels-btn {
+    padding: 7px 12px 3px 12px;
+    margin: 0px 5px 0px 5px;
+    border-radius: 25px;
+    height: 100%;
+    text-align: center;
+}
+
+#channels-btn {
+    color:rgb(124, 9, 99);
+    background-color: #dcdcdc;
+    box-shadow: 0 50px 50px -50px black;
+}
+
+#channels-btn:hover {
+    transition: .5s;
+    background-color: #fff2f2;
+}
+
+
 #login-nav-btn {
     color: #dcdcdc;;
     background-color: rgb(124, 9, 99);
