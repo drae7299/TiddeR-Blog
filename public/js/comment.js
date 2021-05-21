@@ -8,6 +8,7 @@ const createNewComment = async (event) => {
     console.log(blog_split, blog_id);
 
     if (comment_text && blog_id) {
+        console.log(comment_text, blog_id)
         const response = await fetch ('/api/comment', {
             method: 'POST',
             body: JSON.stringify({ comment_text, blog_id }),
